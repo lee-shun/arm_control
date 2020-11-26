@@ -1,0 +1,13 @@
+float64[] JointPosition
+geometry_msgs/Pose Pose
+float64 Speed
+bool AddWaypointOnly
+bool AddAsJointSpace
+bool ClearAllWaypoints
+bool ClearAllPlans
+bool ExcludeGripper
+---
+bool PlanSuccess
+int64 PlanID
+int64 PlansInQueue
+int64 WaypointsInQueue

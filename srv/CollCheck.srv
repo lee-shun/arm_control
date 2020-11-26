@@ -1,0 +1,4 @@
+float64[] JointPosition
+bool VisualiseRobot
+---
+int64 Collision
