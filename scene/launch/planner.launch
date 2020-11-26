@@ -1,0 +1,5 @@
+<launch>
+  <rosparam file="$(find ur5_control)/config/planning_frames.yaml" command="load" ns="" />
+  <node name="ur5_control_apples" pkg="ur5_control" type="apple" respawn="false" output="screen"></node>
+  <node name="ur5_control_planner" pkg="ur5_control" type="planner" respawn="false" output="screen"></node>
+</launch>

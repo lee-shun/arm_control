@@ -1,0 +1,9 @@
+<launch>
+  <rosparam file="$(find ur5_control)/config/gripper.yaml" command="load" ns="" />
+  <arg name="load_base" default="true"/>
+  <arg name="load_gripper" default="true"/>
+  <node name="ur5_control_collisions" pkg="ur5_control" type="coll" respawn="false" output="screen">
+    <param name="/load_base" value="$(arg load_base)"/> 
+    <param name="/load_gripper" value="$(arg load_gripper)"/> 
+  </node>
+</launch>

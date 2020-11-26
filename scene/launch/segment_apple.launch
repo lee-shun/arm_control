@@ -1,0 +1,3 @@
+<launch>
+  <node name="ur5_control_vision" pkg="ur5_control" type="segment_apple.py" respawn="false" output="screen"></node>
+</launch>

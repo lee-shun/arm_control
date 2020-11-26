@@ -1,0 +1,38 @@
+planning_group: "manipulator_i5"
+planning_frame:
+  mobile_base:                    # New frame
+    parent: "base_link"           # Parent frame
+    position: [0, 0, 0]           # Displacement (XYZ metres)
+    orientation: [0, 0, 0]        # Orientation (RPY degrees)
+  camera_link:
+    parent: "ee_link"
+    position: [0.03, 0.03, 0.134]
+    orientation: [0, 0, 0]
+  gripper_tip:
+    parent: "ee_link"
+    position: [0.425, 0, 0]
+    orientation: [0, 0, 0]
+  gripper_grasp:
+    parent: "gripper_tip"
+    position: [-0.03, 0, 0]
+    orientation: [0, 0, 0]
+  apple_withdraw:
+    parent: "gripper_grasp"
+    position: [0.1, 0, 0]
+    orientation: [0, 0, 0]
+  apple_inspect:
+    parent: "camera_link"
+    position: [0.45, 0, -0.04]
+    orientation: [0, 0, 0]
+  apple_approach:
+    parent: "gripper_tip"
+    position: [0.04, 0, -0.01]
+    orientation: [0, 0, 0]
+  apple_touch:
+    parent: "gripper_tip"
+    position: [0.04, 0, -0.01]
+    orientation: [0, 0, 0]
+  apple_deposit:
+    parent: "mobile_base"
+    position: [0, -0.6, 0]
+    orientation: [0, 90, 180]
