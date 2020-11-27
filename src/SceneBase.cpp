@@ -49,7 +49,7 @@ bool SceneBase::ApplyAttachedCollisionObject(
 }
 
 /**
- * 
+ *
  */
 bool SceneBase::ApplyCollisionObject(moveit_msgs::CollisionObject &msg,
                                      double delay) {

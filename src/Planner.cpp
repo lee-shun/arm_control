@@ -24,6 +24,7 @@ bool Planner::SvcCallback_PlanPath(arm_control::PlanPath::Request &req,
     }
 
     bool pose_valid = true;
+
     if (req.AddAsJointSpace) {
       if (start_state == 0) {
         start_state = new robot_state::RobotState(

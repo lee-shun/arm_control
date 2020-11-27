@@ -24,7 +24,10 @@ public:
   moveit::planning_interface::PlanningSceneInterface
       *ur5_planning_scene_interface = 0;
   planning_scene::PlanningScene *ur5_planning_scene = 0;
+
+  //指针指向的内容不可改变
   const robot_state::JointModelGroup *ur5_joint_model_group = 0;
+
   tf2_ros::StaticTransformBroadcaster *StaticTFBroadcaster = 0;
   tf2_ros::TransformBroadcaster *TFBroadcaster = 0;
   tf2_ros::TransformListener *TFListener = 0;
