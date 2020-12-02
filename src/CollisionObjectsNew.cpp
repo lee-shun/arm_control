@@ -55,9 +55,9 @@ bool CollHandler::SvcCallback_CollCheck(arm_control::CollCheck::Request &req,
 }
 
 /**
- * @param[in]  
- * @param[out]  
- * @return 
+ * @param[in]
+ * @param[out]
+ * @return
  * @ref
  * @see
  * @note 如果被调用，加入一个gripper

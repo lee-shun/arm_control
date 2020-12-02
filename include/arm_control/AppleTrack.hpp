@@ -58,12 +58,12 @@ private:
   moveit_msgs::AttachedCollisionObject cobj_apple_grasped;
 
   /**
-   * 整理AppleList
+   * Arrange the AppleList
    */
   void SubCallback_apple_new(const geometry_msgs::PoseArray::ConstPtr &msg);
 
   /**
-   * 将整理好的Applist发送到->CollisionObject.cpp->Moveit，设置apple的collision
+   * send Applist->CollisionObject.cpp->Moveit，set the collision
    */
   bool SvcCallback_apple_coll(arm_control::ServiceInt::Request &req,
                               arm_control::ServiceInt::Request &res);
@@ -75,7 +75,7 @@ public:
   ros::Publisher pub_AppleMsg;
   void UpdateAppleTF();
   AppleTrack(ros::NodeHandle &node);
-  ~AppleTrack(){};//TODO:注意一下AppleList里面的指针
+  ~AppleTrack(){};//TODO:the space of "new" operations should be freed in AppleList
 };
 
 #endif
