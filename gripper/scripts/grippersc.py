@@ -10,10 +10,10 @@ import struct
 
 
 class gripper:
-    def __init__(self):	
+    def __init__(self):
         self.ser = serial.Serial("/dev/ttyACM0")
         #for i in range(20):
-            #try: 
+            #try:
                 #self.ser = serial.Serial("/dev/ttyACM" + str(i))
             #except:
                 #continue
@@ -30,7 +30,7 @@ class gripper:
         self.Service = rospy.Service('ur5_control/gripper/command',ServiceInt,self.svc_callback_gripper)
         print("Service started")
 
-    
+
     def svc_callback_gripper(self,req):
         res = ServiceIntResponse()
         res.Response = 0
@@ -51,7 +51,7 @@ class gripper:
     def grasp(self):
         self.ser.write("\x10\x46\x03")
         print("Grasped")
-	
+
     def shoot(self):
         self.ser.write("\x10\x47\x03")
         print("Shot")
@@ -62,17 +62,17 @@ class gripper:
             response=0
         #response = hexShow(response)
         return int(response)
-        
 
-def hexShow(argv):  
-    result = ''  
-    hLen = len(argv)  
-    for i in xrange(hLen):  
-        hvol = ord(argv[i])  
-        hhex = '%02x'%hvol  
-        result += hhex+' '  
+
+def hexShow(argv):
+    result = ''
+    hLen = len(argv)
+    for i in xrange(hLen):
+        hvol = ord(argv[i])
+        hhex = '%02x'%hvol
+        result += hhex+' '
     return result
-	
+
 
 
 if __name__=='__main__':
